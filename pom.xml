@@ -19,7 +19,6 @@
     <modules>
         <module>grpc-lib</module>
         <module>grpc-server</module>
-        <module>grpc-client</module>
     </modules>
 
     <properties>
