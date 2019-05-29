@@ -5,7 +5,20 @@
 
     <artifactId>grpc-server</artifactId>
     <packaging>jar</packaging>
+    <properties>
+        <java.version>1.8</java.version>
+        <nd4j.backend>nd4j-native-platform</nd4j.backend>
+        <!--<nd4j.backend>nd4j-cuda-10.1-platform</nd4j.backend>-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <shadedClassifier>bin</shadedClassifier>
 
+        <java.version>1.8</java.version>
+        <nd4j.version>1.0.0-beta4</nd4j.version>
+        <dl4j.version>1.0.0-beta4</dl4j.version>
+        <datavec.version>1.0.0-beta4</datavec.version>
+        <arbiter.version>1.0.0-beta4</arbiter.version>
+        <rl4j.version>1.0.0-beta4</rl4j.version>
+    </properties>
     <name>grpc-server</name>
 
     <parent>
@@ -31,6 +44,24 @@
         <dependency>
             <groupId>net.devh</groupId>
             <artifactId>grpc-server-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.nd4j</groupId>
+            <artifactId>${nd4j.backend}</artifactId>
+            <version>${nd4j.version}</version>
+        </dependency>
+
+        <!-- Core DL4J functionality -->
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-nlp</artifactId>
+            <version>${dl4j.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.deeplearning4j</groupId>
+            <artifactId>deeplearning4j-modelimport</artifactId>
+            <version>${dl4j.version}</version>
         </dependency>
     </dependencies>
 
